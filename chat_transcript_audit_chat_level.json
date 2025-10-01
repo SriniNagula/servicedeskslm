@@ -1,0 +1,68 @@
+[
+    {
+        "chat_id": "C001",
+        "customer_id": "U123",
+        "agent_id": "A456",
+        "channel": "chat",
+        "start_time": "2025-09-01 10:00:00",
+        "end_time": "2025-09-01 10:15:00",
+        "duration_minutes": 15,
+        "message_count": 4,
+        "audit": {
+            "compliance_check": "Yes",
+            "tone_professionalism": "Polite",
+            "resolution_status": "Resolved",
+            "accuracy": "Correct",
+            "issue_category": "Billing",
+            "customer_sentiment": "Neutral",
+            "audit_score": 90
+        },
+        "transcript": [
+            {
+                "turn_number": 1,
+                "speaker": "Customer",
+                "message_text": "Hi, I was charged twice for my last bill.",
+                "timestamp": "2025-09-01 10:00:05"
+            },
+            {
+                "turn_number": 2,
+                "speaker": "Agent",
+                "message_text": "I understand. Let me check your billing history.",
+                "timestamp": "2025-09-01 10:01:10"
+            }
+        ]
+    },
+    {
+        "chat_id": "C002",
+        "customer_id": "U789",
+        "agent_id": "A555",
+        "channel": "chat",
+        "start_time": "2025-09-02 15:20:00",
+        "end_time": "2025-09-02 15:40:00",
+        "duration_minutes": 20,
+        "message_count": 3,
+        "audit": {
+            "compliance_check": "Yes",
+            "tone_professionalism": "Polite",
+            "resolution_status": "Escalated",
+            "accuracy": "Correct",
+            "issue_category": "Technical Support",
+            "customer_sentiment": "Negative",
+            "audit_score": 70
+        },
+        "transcript": [
+            {
+                "turn_number": 1,
+                "speaker": "Customer",
+                "message_text": "My internet is not working since morning.",
+                "timestamp": "2025-09-02 15:20:10"
+            },
+            {
+                "turn_number": 2,
+                "speaker": "Agent",
+                "message_text": "I’m sorry for the inconvenience. I’ll escalate this to our network team.",
+                "timestamp": "2025-09-02 15:22:45"
+            }
+        ]
+    }
+]
