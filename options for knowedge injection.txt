@@ -1,0 +1,34 @@
+1. Fine-Tune the SLM with Rules Document
+
+Instead of training with chat+labels, you train the model on your rules document directly.
+
+Essentially, you teach the model: “These are the rules that must be followed when auditing a transcript.”
+
+During fine-tuning, you don’t need to show examples of chats, just the rules framed as knowledge text.
+
+Example training sample:
+
+{
+  "system": "You are an audit assistant.",
+  "input": "Learn the following audit rules:\n1. Agent must greet the user.\n2. Agent must confirm the issue.\n3. Agent must not share sensitive info.\n4. Agent must provide resolution or escalate.",
+  "output": "Understood. I will use these rules to audit any transcript."
+}
+
+
+2. Domain-Adaptive Pretraining (DAPT)
+
+Another way is to continue pretraining the SLM on a large corpus that includes your audit rules (document repeated many times).
+
+This is like giving the model a knowledge injection.
+
+Example: Train it for a few epochs with your rules doc treated as plain text.
+
+Result: The model encodes the rules into its parameters.
+
+Then at inference:
+
+Transcript:
+User: VPN not working
+Agent: Try resetting your password
+---
+Audit Result: Fail (Agent did not confirm the issue, did not escalate)
